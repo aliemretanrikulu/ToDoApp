@@ -1,37 +1,39 @@
-﻿
-
+﻿using System;
 using ToDoApp.Models;
 
-namespace ToDoApp.Repository;
+namespace TodoList2.Repository;
 
-public abstract class BaseRepository
+public class BaseRepository
 {
     List<ToDo> todos = new List<ToDo>()
     {
+        
         new ToDo()
         {
-           Id = 1,
-           CreatedDate = DateTime.Now,
-           Description = "Fizik ödevi yapılacak",
-           EndDate = new DateTime(2024,10,10),
-           StartDate = new DateTime(2024,9,26),
-           isCompleted = false,
-           Priority = "Çok yüksek öncelikli",
-           UserId = 1,
+            
+            Description = "Fizik Ödevi Yapılaak",
+            EndDate = new DateTime(2024,10,10),
+            StartDate = new DateTime(2024,9,26),
+            isCompleted = false,
+            Priority = "Çok Yüksek Öncelikli",
+            Title = "Fizik Ödevi",
+            UserId = 1
         }
     };
 
-    List<User> user = new List<User>()
+    List<User> users = new List<User>()
     {
         new User()
         {
-            Id = 1,
-            Age = 25,
+            Id=1,
+            Age= 25,
             EMail = "deneme@gmail.com",
             Name = "deneme",
-            Surname = "denemed",
-            Password = "123456"
-
+            Surname = "Doğan",
+            Password = "12345689"
         }
-
     };
+
+    protected List<User> Users() { return users; }
+    protected List<ToDo> Todos() { return todos; }
+}

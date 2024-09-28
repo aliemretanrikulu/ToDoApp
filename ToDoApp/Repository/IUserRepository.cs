@@ -1,15 +1,9 @@
-﻿
+﻿using ToDoApp.Models;
+using ToDoApp.Repository;
 
-using ToDoApp.Models;
+namespace TodoList2.Repository;
 
-namespace ToDoApp.Repository;
-
-public interface IUserRepository : IRepository<User,long>
+public interface IUserRepository : IRepository<User, long>
 {
-    List<User> GetAll();
-    User GetById(int id);
-    User Add(ToDo item);
-    User Remove(int id);
-}
 
 }

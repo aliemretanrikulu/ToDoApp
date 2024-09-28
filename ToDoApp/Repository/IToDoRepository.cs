@@ -5,5 +5,5 @@ namespace ToDoApp.Repository;
 
 public interface IToDoRepository : IRepository<ToDo, Guid>
 {
-    List<ToDo> 
+    List<ToDo> GettAllByTitleContains(string title);
 }

@@ -9,8 +9,8 @@ public record ToDoDto (
     string Title,
     string Description,
     DateTime CreatedDate,
-    string StartDate,
-    string EndDate,
+    DateTime StartDate,
+    DateTime EndDate,
     bool isCompleted,
     string Priority
     );

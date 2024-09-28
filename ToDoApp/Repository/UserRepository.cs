@@ -1,8 +1,10 @@
 ﻿
 
+using ToDoApp.Models;
+
 namespace ToDoApp.Repository;
 
-public class UserRepository : BaseRepository, IUserRepository
+public interface IUserRepository : IRepository<User, long>
 {
 
 }
